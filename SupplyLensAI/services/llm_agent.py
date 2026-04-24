@@ -26,6 +26,17 @@ class BaseProvider:
             await asyncio.sleep(0)
 
 
+class UnavailableProvider(BaseProvider):
+    def __init__(self, reason: str):
+        self.reason = reason
+
+    async def complete(self, messages: list[dict]) -> str:
+        raise RuntimeError(self.reason)
+
+    async def stream(self, messages: list[dict]) -> AsyncGenerator[str, None]:
+        raise RuntimeError(self.reason)
+
+
 class OllamaProvider(BaseProvider):
     def __init__(self, base_url: str, model: str, timeout_seconds: float):
         self.base_url = base_url.rstrip("/")
@@ -239,15 +250,15 @@ def build_provider() -> BaseProvider:
     settings = get_settings()
     if settings.llm_provider == "openai":
         if not settings.openai_api_key:
-            raise ValueError("LLM_PROVIDER=openai requires OPENAI_API_KEY")
+            return UnavailableProvider("LLM_PROVIDER=openai requires OPENAI_API_KEY")
         return OpenAIProvider(settings.openai_api_key, settings.openai_model, settings.llm_timeout_seconds)
     if settings.llm_provider == "gemini":
         if not settings.gemini_api_key:
-            raise ValueError("LLM_PROVIDER=gemini requires GEMINI_API_KEY")
+            return UnavailableProvider("LLM_PROVIDER=gemini requires GEMINI_API_KEY")
         return GeminiProvider(settings.gemini_api_key, settings.gemini_model, settings.llm_timeout_seconds)
     if settings.llm_provider == "ollama":
         return OllamaProvider(settings.ollama_base_url, settings.ollama_model, settings.llm_timeout_seconds)
-    raise ValueError(
+    return UnavailableProvider(
         f"Unsupported LLM_PROVIDER '{settings.llm_provider}'. "
         "Use one of: openai, gemini, ollama."
     )

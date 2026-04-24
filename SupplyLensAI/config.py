@@ -2,6 +2,7 @@ import os
 from dataclasses import dataclass
 from functools import lru_cache
 from pathlib import Path
+from secrets import token_urlsafe
 
 try:
     from dotenv import load_dotenv
@@ -25,6 +26,7 @@ def _split_csv(value: str) -> tuple[str, ...]:
 
 
 BASE_DIR = Path(__file__).resolve().parent
+# Secrets should come from the local .env file or the Render dashboard, never from source control.
 load_dotenv(BASE_DIR / ".env")
 
 
@@ -52,7 +54,7 @@ class Settings:
     app_env: str = os.getenv("APP_ENV", "development")
     host: str = os.getenv("HOST", "0.0.0.0")
     port: int = int(os.getenv("PORT", "8000"))
-    secret_key: str = os.getenv("SECRET_KEY", "supplylens-dev-secret-change-me")
+    secret_key: str = os.getenv("SECRET_KEY", "")
     jwt_algorithm: str = os.getenv("JWT_ALGORITHM", "HS256")
     jwt_exp_minutes: int = int(os.getenv("JWT_EXP_MINUTES", "90"))
     database_url: str = os.getenv("DATABASE_URL", "sqlite:///./supplylens_dev.db")
@@ -73,6 +75,12 @@ class Settings:
     rate_limit_window_seconds: int = int(os.getenv("RATE_LIMIT_WINDOW_SECONDS", "60"))
     enable_prediction_logging: bool = _get_bool("ENABLE_PREDICTION_LOGGING", True)
     enable_db_persistence: bool = _get_bool("ENABLE_DB_PERSISTENCE", True)
+    show_demo_password_hints: bool = _get_bool("SHOW_DEMO_PASSWORD_HINTS", False)
+    demo_admin_password: str = os.getenv("DEMO_ADMIN_PASSWORD", "")
+    demo_superuser_password: str = os.getenv("DEMO_SUPERUSER_PASSWORD", "")
+    demo_carrier_password: str = os.getenv("DEMO_CARRIER_PASSWORD", "")
+    demo_field_password: str = os.getenv("DEMO_FIELD_PASSWORD", "")
+    demo_user_password: str = os.getenv("DEMO_USER_PASSWORD", "")
 
     @property
     def allowed_origins(self) -> list[str]:
@@ -98,4 +106,12 @@ class Settings:
 
 @lru_cache(maxsize=1)
 def get_settings() -> Settings:
+    settings = Settings()
+    if settings.secret_key:
+        return settings
+
+    if settings.app_env == "production":
+        raise ValueError("SECRET_KEY must be set in production")
+
+    os.environ["SECRET_KEY"] = token_urlsafe(32)
     return Settings()

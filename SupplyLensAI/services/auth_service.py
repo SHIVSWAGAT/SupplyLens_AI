@@ -73,15 +73,45 @@ ROLE_LABELS = {
     "normal_user": "Normal User",
 }
 
-USERS: Dict[str, UserRecord] = {
-    "admin": UserRecord("admin", "admin123", "admin", "Ava Admin"),
-    "superuser": UserRecord("superuser", "super123", "super_user", "Sanjay Super User"),
-    "carrier": UserRecord("carrier", "carrier123", "carrier_manager", "Mira Carrier Manager", carrier_scope="DHL"),
-    "field": UserRecord("field", "field123", "field_supervisor", "Noah Field Supervisor"),
-    "user": UserRecord("user", "user123", "normal_user", "Nina User"),
+DEMO_USER_PROFILES = {
+    "admin": {"role": "admin", "name": "Ava Admin", "carrier_scope": None},
+    "superuser": {"role": "super_user", "name": "Sanjay Super User", "carrier_scope": None},
+    "carrier": {"role": "carrier_manager", "name": "Mira Carrier Manager", "carrier_scope": "DHL"},
+    "field": {"role": "field_supervisor", "name": "Noah Field Supervisor", "carrier_scope": None},
+    "user": {"role": "normal_user", "name": "Nina User", "carrier_scope": None},
+}
+
+DEMO_PASSWORD_ENV_VARS = {
+    "admin": "DEMO_ADMIN_PASSWORD",
+    "superuser": "DEMO_SUPERUSER_PASSWORD",
+    "carrier": "DEMO_CARRIER_PASSWORD",
+    "field": "DEMO_FIELD_PASSWORD",
+    "user": "DEMO_USER_PASSWORD",
 }
 
 _REVOKED_TOKENS: set[str] = set()
+
+
+def _demo_users() -> Dict[str, UserRecord]:
+    settings = get_settings()
+    configured_passwords = {
+        "admin": settings.demo_admin_password,
+        "superuser": settings.demo_superuser_password,
+        "carrier": settings.demo_carrier_password,
+        "field": settings.demo_field_password,
+        "user": settings.demo_user_password,
+    }
+
+    return {
+        user_id: UserRecord(
+            user_id=user_id,
+            password=configured_passwords.get(user_id, ""),
+            role=profile["role"],
+            name=profile["name"],
+            carrier_scope=profile["carrier_scope"],
+        )
+        for user_id, profile in DEMO_USER_PROFILES.items()
+    }
 
 
 def _build_permissions(role: str) -> dict:
@@ -103,7 +133,7 @@ def sanitize_user(user: UserRecord) -> dict:
 
 
 def authenticate(user_id: str, password: str) -> Optional[dict]:
-    user = USERS.get(user_id.strip().lower())
+    user = _demo_users().get(user_id.strip().lower())
     if not user or user.password != password:
         return None
 
@@ -137,7 +167,7 @@ def get_user_by_token(token: str) -> Optional[dict]:
     except jwt.PyJWTError:
         return None
 
-    user = USERS.get(str(payload.get("sub", "")).lower())
+    user = _demo_users().get(str(payload.get("sub", "")).lower())
     if not user:
         return None
 
@@ -150,23 +180,18 @@ def revoke_token(token: str):
 
 
 def list_demo_users() -> List[dict]:
-    password_hints = {
-        "admin": "admin123",
-        "superuser": "super123",
-        "carrier": "carrier123",
-        "field": "field123",
-        "user": "user123",
-    }
+    settings = get_settings()
     demo_users = []
-    for user in USERS.values():
+    for user in _demo_users().values():
         data = sanitize_user(user)
-        data["password_hint"] = password_hints.get(user.user_id, "")
+        if settings.show_demo_password_hints and user.password:
+            data["password_hint"] = user.password
         demo_users.append(data)
     return demo_users
 
 
 def get_demo_users() -> List[dict]:
-    return [sanitize_user(user) for user in USERS.values()]
+    return [sanitize_user(user) for user in _demo_users().values()]
 
 
 def is_authorized(path: str, method: str, role: str) -> bool:

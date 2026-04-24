@@ -1,3 +1,4 @@
+// Frontend must use only a public backend base URL. Private provider keys stay on the backend.
 const configuredApiBase = (import.meta.env.VITE_API_BASE_URL || "").trim().replace(/\/+$/, "");
 
 export const API_BASE = configuredApiBase

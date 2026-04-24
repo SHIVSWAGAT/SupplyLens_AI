@@ -1,3 +1,4 @@
+import os
 from datetime import datetime
 
 from fastapi.testclient import TestClient
@@ -13,7 +14,7 @@ client = TestClient(app)
 def login_token():
     response = client.post(
         "/api/auth/login",
-        json={"user_id": "admin", "password": "admin123"},
+        json={"user_id": "admin", "password": os.environ["DEMO_ADMIN_PASSWORD"]},
     )
     assert response.status_code == 200
     return response.json()["token"]
