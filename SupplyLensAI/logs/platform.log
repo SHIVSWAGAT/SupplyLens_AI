@@ -1868,3 +1868,150 @@
 2026-04-25 00:00:11,430 INFO request path=/api/analytics/region-disruptions method=GET status=200 duration_ms=41.71
 2026-04-25 00:00:11,430 INFO request path=/api/analytics/monthly-trends method=GET status=200 duration_ms=43.38
 2026-04-25 00:00:11,431 INFO request path=/api/routes/cities method=GET status=200 duration_ms=2.14
+2026-04-25 00:00:12,359 INFO prediction_event type=shipment_prediction payload={"shipment_id": "88ea56e1-f04b-8ce8-27ee-7f9d9e3a5c5e", "tracking_number": "SC5971886", "risk_score": 0.98, "predicted_eta": "2025-11-11 07:53", "anomaly_detected": true}
+2026-04-25 00:00:12,359 INFO prediction_event type=shipment_prediction payload={"shipment_id": "e5ea75d2-2679-2dc5-1461-325ff53a8213", "tracking_number": "SC9376830", "risk_score": 0.98, "predicted_eta": "2026-04-15 09:20", "anomaly_detected": true}
+2026-04-25 00:00:12,359 INFO prediction_event type=shipment_prediction payload={"shipment_id": "d4d8fc4c-face-4e0a-4115-1b24d8b66f54", "tracking_number": "SC6640657", "risk_score": 0.9448, "predicted_eta": "2026-04-13 01:29", "anomaly_detected": true}
+2026-04-25 00:00:25,001 INFO prediction_event type=shipment_prediction payload={"shipment_id": "3d8f8a80-416f-d034-2a66-82f92defabbb", "tracking_number": "SC8312197", "risk_score": 0.98, "predicted_eta": "2026-04-13 08:09", "anomaly_detected": true}
+2026-04-25 00:00:31,429 INFO prediction_event type=shipment_prediction payload={"shipment_id": "21998710-aa51-08ff-afc6-7ebf70835281", "tracking_number": "SC1969766", "risk_score": 0.8958, "predicted_eta": "2026-04-13 01:59", "anomaly_detected": true}
+2026-04-25 00:00:45,555 INFO prediction_event type=shipment_prediction payload={"shipment_id": "e3bde622-f5f0-4fd3-734c-3ed049928aeb", "tracking_number": "SC1676620", "risk_score": 0.98, "predicted_eta": "2026-04-12 20:57", "anomaly_detected": true}
+2026-04-25 00:00:45,555 INFO prediction_event type=shipment_prediction payload={"shipment_id": "f19a0e65-71a3-8612-a8a4-e9694c9a6afa", "tracking_number": "SC4036335", "risk_score": 0.98, "predicted_eta": "2026-04-13 05:19", "anomaly_detected": true}
+2026-04-25 00:00:45,556 INFO prediction_event type=shipment_prediction payload={"shipment_id": "3e59202c-f3c9-ce6e-51d4-1ad73a9f78a7", "tracking_number": "SC4489054", "risk_score": 0.8245, "predicted_eta": "2026-04-17 03:49", "anomaly_detected": false}
+2026-04-25 00:01:04,973 INFO prediction_event type=shipment_prediction payload={"shipment_id": "2e1fc467-24da-ee9a-9778-1771d7a65a04", "tracking_number": "SC9500598", "risk_score": 0.98, "predicted_eta": "2026-04-16 22:46", "anomaly_detected": true}
+2026-04-25 00:01:04,974 INFO prediction_event type=shipment_prediction payload={"shipment_id": "83e1f43b-cd1f-005f-0edf-cde378e072b1", "tracking_number": "SC1652121", "risk_score": 0.98, "predicted_eta": "2026-04-14 23:06", "anomaly_detected": true}
+2026-04-25 00:01:11,308 INFO request path=/api/shipments/stats method=GET status=200 duration_ms=3.43
+2026-04-25 00:01:11,388 INFO request path=/api/weather/route-advisories method=GET status=200 duration_ms=80.53
+2026-04-25 00:01:11,389 INFO prediction_event type=shipment_prediction payload={"shipment_id": "435d8419-5767-0bf7-c0c9-e2e9f6733ba1", "tracking_number": "SC8357138", "risk_score": 0.98, "predicted_eta": "2026-04-21 03:38", "anomaly_detected": true}
+2026-04-25 00:01:11,389 INFO prediction_event type=shipment_prediction payload={"shipment_id": "d9b9205f-bb27-6ac5-13ff-a285c970e809", "tracking_number": "SC1599184", "risk_score": 0.98, "predicted_eta": "2026-04-13 00:17", "anomaly_detected": true}
+2026-04-25 00:01:11,390 INFO prediction_event type=shipment_prediction payload={"shipment_id": "38b97695-3bcb-62a2-93d2-756ae92a4b62", "tracking_number": "SC7923646", "risk_score": 0.8728, "predicted_eta": "2026-04-12 13:56", "anomaly_detected": true}
+2026-04-25 00:01:11,390 INFO prediction_event type=shipment_prediction payload={"shipment_id": "ce8ce65c-defd-c0c3-3a4c-566605e83b01", "tracking_number": "SC2424618", "risk_score": 0.98, "predicted_eta": "2026-04-13 01:36", "anomaly_detected": true}
+2026-04-25 00:01:12,765 INFO request path=/api/shipments method=GET status=200 duration_ms=1461.48
+2026-04-25 00:01:12,766 INFO request path=/api/weather method=GET status=200 duration_ms=1451.55
+2026-04-25 00:01:12,772 INFO request path=/api/alerts method=GET status=200 duration_ms=1467.56
+2026-04-25 00:01:12,774 INFO request path=/api/analytics/kpis method=GET status=200 duration_ms=1385.49
+2026-04-25 00:01:12,821 INFO request path=/api/analytics/carrier-performance method=GET status=200 duration_ms=46.94
+2026-04-25 00:01:12,824 INFO request path=/api/analytics/region-disruptions method=GET status=200 duration_ms=48.11
+2026-04-25 00:01:12,824 INFO request path=/api/analytics/ai-insights method=GET status=200 duration_ms=13.67
+2026-04-25 00:01:12,824 INFO request path=/api/routes/cities method=GET status=200 duration_ms=20.33
+2026-04-25 00:01:12,825 INFO request path=/api/analytics/monthly-trends method=GET status=200 duration_ms=49.46
+2026-04-25 00:01:17,768 INFO prediction_event type=shipment_prediction payload={"shipment_id": "b4ef78f2-b394-43df-5fcc-7aa4a24367f3", "tracking_number": "SC9929603", "risk_score": 0.98, "predicted_eta": "2025-12-30 20:25", "anomaly_detected": true}
+2026-04-25 00:01:17,775 INFO prediction_event type=shipment_prediction payload={"shipment_id": "45bea202-c826-8a0d-7e5c-ca07c69744d7", "tracking_number": "SC2378557", "risk_score": 0.98, "predicted_eta": "2026-04-18 02:07", "anomaly_detected": true}
+2026-04-25 00:01:30,345 INFO prediction_event type=shipment_prediction payload={"shipment_id": "fdbe2378-c745-1031-728d-8ba05ce5af21", "tracking_number": "SC9388496", "risk_score": 0.98, "predicted_eta": "2026-04-20 09:06", "anomaly_detected": true}
+2026-04-25 00:01:30,354 INFO prediction_event type=shipment_prediction payload={"shipment_id": "b8ac0cc7-edfa-bbfb-a323-4ad9e717ae1b", "tracking_number": "SC1884158", "risk_score": 0.98, "predicted_eta": "2026-04-12 21:34", "anomaly_detected": true}
+2026-04-25 00:01:30,355 INFO prediction_event type=shipment_prediction payload={"shipment_id": "f1da58df-6918-c284-7a0b-c9898032e2f7", "tracking_number": "SC9921835", "risk_score": 0.98, "predicted_eta": "2025-11-26 21:10", "anomaly_detected": true}
+2026-04-25 00:01:36,561 INFO prediction_event type=shipment_prediction payload={"shipment_id": "d01edc3a-0814-8d23-6372-5205efe5706d", "tracking_number": "SC1832012", "risk_score": 0.98, "predicted_eta": "2026-04-16 06:17", "anomaly_detected": true}
+2026-04-25 00:01:36,565 INFO prediction_event type=shipment_prediction payload={"shipment_id": "aba704d3-9a7e-34fd-2ba6-d66934a8cdae", "tracking_number": "SC5471734", "risk_score": 0.98, "predicted_eta": "2026-04-10 18:07", "anomaly_detected": true}
+2026-04-25 00:01:42,845 INFO prediction_event type=shipment_prediction payload={"shipment_id": "110515a4-8aec-8ed9-d201-3cd95c6d0e1b", "tracking_number": "SC8721203", "risk_score": 0.9365, "predicted_eta": "2026-03-30 15:12", "anomaly_detected": true}
+2026-04-25 00:01:49,055 INFO prediction_event type=shipment_prediction payload={"shipment_id": "02f86d94-c236-ed75-0fe6-5cc308b043ef", "tracking_number": "SC6370374", "risk_score": 0.9125, "predicted_eta": "2026-04-29 19:08", "anomaly_detected": true}
+2026-04-25 00:01:49,056 INFO prediction_event type=shipment_prediction payload={"shipment_id": "f1874acb-27c3-0837-3011-06498c9df511", "tracking_number": "SC2823246", "risk_score": 0.98, "predicted_eta": "2026-04-13 04:59", "anomaly_detected": true}
+2026-04-25 00:01:49,057 INFO prediction_event type=shipment_prediction payload={"shipment_id": "94fa0d9e-31a7-aa15-85ec-5f0a08415c5a", "tracking_number": "SC8391611", "risk_score": 0.98, "predicted_eta": "2026-03-20 22:55", "anomaly_detected": true}
+2026-04-25 00:01:49,058 INFO prediction_event type=shipment_prediction payload={"shipment_id": "82be22b6-1715-6bad-ffbc-9929cad6d870", "tracking_number": "SC3341318", "risk_score": 0.98, "predicted_eta": "2026-03-13 04:16", "anomaly_detected": true}
+2026-04-25 00:01:55,342 INFO prediction_event type=shipment_prediction payload={"shipment_id": "f2955f41-d4c2-5c21-951b-8c4512007046", "tracking_number": "SC9981212", "risk_score": 0.8216, "predicted_eta": "2025-11-29 21:10", "anomaly_detected": false}
+2026-04-25 00:01:55,343 INFO prediction_event type=shipment_prediction payload={"shipment_id": "2f4a805e-ef26-ddf4-24f6-14159b802cda", "tracking_number": "SC8383812", "risk_score": 0.8573, "predicted_eta": "2026-04-17 18:58", "anomaly_detected": true}
+2026-04-25 00:02:01,676 INFO prediction_event type=shipment_prediction payload={"shipment_id": "88ea56e1-f04b-8ce8-27ee-7f9d9e3a5c5e", "tracking_number": "SC5971886", "risk_score": 0.98, "predicted_eta": "2025-11-11 07:53", "anomaly_detected": true}
+2026-04-25 00:02:01,676 INFO prediction_event type=shipment_prediction payload={"shipment_id": "e3bde622-f5f0-4fd3-734c-3ed049928aeb", "tracking_number": "SC1676620", "risk_score": 0.98, "predicted_eta": "2026-04-12 20:57", "anomaly_detected": true}
+2026-04-25 00:02:07,283 INFO request path=/api/weather/route-advisories method=GET status=200 duration_ms=18.89
+2026-04-25 00:02:07,284 INFO request path=/api/weather method=GET status=200 duration_ms=3.29
+2026-04-25 00:02:07,284 INFO request path=/api/shipments/stats method=GET status=200 duration_ms=22.63
+2026-04-25 00:02:07,364 INFO request path=/api/shipments method=GET status=200 duration_ms=104.67
+2026-04-25 00:02:07,365 INFO request path=/api/alerts method=GET status=200 duration_ms=102.58
+2026-04-25 00:02:07,368 INFO request path=/api/analytics/kpis method=GET status=200 duration_ms=85.43
+2026-04-25 00:02:07,408 INFO request path=/api/analytics/ai-insights method=GET status=200 duration_ms=2.94
+2026-04-25 00:02:07,408 INFO request path=/api/analytics/region-disruptions method=GET status=200 duration_ms=34.13
+2026-04-25 00:02:07,421 INFO request path=/api/routes/cities method=GET status=200 duration_ms=16.10
+2026-04-25 00:02:07,423 INFO request path=/api/analytics/carrier-performance method=GET status=200 duration_ms=52.45
+2026-04-25 00:02:07,423 INFO request path=/api/analytics/monthly-trends method=GET status=200 duration_ms=50.31
+2026-04-25 00:02:08,103 INFO prediction_event type=shipment_prediction payload={"shipment_id": "340cca8c-4991-1c4c-666a-319ca9acc3c3", "tracking_number": "SC1568173", "risk_score": 0.98, "predicted_eta": "2026-04-14 13:49", "anomaly_detected": true}
+2026-04-25 00:02:08,104 INFO prediction_event type=shipment_prediction payload={"shipment_id": "d1a42061-e004-0926-d1b5-f3a5b7e31914", "tracking_number": "SC5988559", "risk_score": 0.98, "predicted_eta": "2026-04-18 04:34", "anomaly_detected": true}
+2026-04-25 00:02:09,486 INFO request path=/api/weather/route-advisories method=GET status=200 duration_ms=7.11
+2026-04-25 00:02:09,488 INFO request path=/api/weather method=GET status=200 duration_ms=8.88
+2026-04-25 00:02:09,488 INFO request path=/api/shipments/stats method=GET status=200 duration_ms=9.54
+2026-04-25 00:02:09,544 INFO request path=/api/shipments method=GET status=200 duration_ms=65.42
+2026-04-25 00:02:09,545 INFO request path=/api/analytics/kpis method=GET status=200 duration_ms=65.69
+2026-04-25 00:02:09,545 INFO request path=/api/alerts method=GET status=200 duration_ms=65.99
+2026-04-25 00:02:09,600 INFO request path=/api/analytics/monthly-trends method=GET status=200 duration_ms=53.20
+2026-04-25 00:02:09,601 INFO request path=/api/analytics/carrier-performance method=GET status=200 duration_ms=54.68
+2026-04-25 00:02:09,602 INFO request path=/api/analytics/region-disruptions method=GET status=200 duration_ms=47.39
+2026-04-25 00:02:09,602 INFO request path=/api/analytics/ai-insights method=GET status=200 duration_ms=3.19
+2026-04-25 00:02:09,602 INFO request path=/api/routes/cities method=GET status=200 duration_ms=3.28
+2026-04-25 00:02:14,482 INFO prediction_event type=shipment_prediction payload={"shipment_id": "16e3a86c-7389-721d-a2dd-c110c360ac95", "tracking_number": "SC2893196", "risk_score": 0.98, "predicted_eta": "2026-04-13 15:33", "anomaly_detected": true}
+2026-04-25 00:02:18,334 INFO request path=/api/weather/route-advisories method=GET status=200 duration_ms=21.26
+2026-04-25 00:02:18,335 INFO request path=/api/weather method=GET status=200 duration_ms=6.07
+2026-04-25 00:02:18,336 INFO request path=/api/shipments/stats method=GET status=200 duration_ms=25.15
+2026-04-25 00:02:18,405 INFO request path=/api/shipments method=GET status=200 duration_ms=95.39
+2026-04-25 00:02:18,406 INFO request path=/api/alerts method=GET status=200 duration_ms=94.22
+2026-04-25 00:02:18,406 INFO request path=/api/analytics/kpis method=GET status=200 duration_ms=75.14
+2026-04-25 00:02:18,450 INFO request path=/api/analytics/carrier-performance method=GET status=200 duration_ms=41.35
+2026-04-25 00:02:18,452 INFO request path=/api/analytics/monthly-trends method=GET status=200 duration_ms=42.52
+2026-04-25 00:02:18,452 INFO request path=/api/analytics/region-disruptions method=GET status=200 duration_ms=41.93
+2026-04-25 00:02:18,452 INFO request path=/api/analytics/ai-insights method=GET status=200 duration_ms=3.86
+2026-04-25 00:02:18,453 INFO request path=/api/routes/cities method=GET status=200 duration_ms=3.49
+2026-04-25 00:02:20,776 INFO prediction_event type=shipment_prediction payload={"shipment_id": "4281f290-6b8a-005e-ade7-ebd25abe712e", "tracking_number": "SC6844805", "risk_score": 0.98, "predicted_eta": "2026-04-13 11:21", "anomaly_detected": true}
+2026-04-25 00:02:27,099 INFO prediction_event type=shipment_prediction payload={"shipment_id": "16e3a86c-7389-721d-a2dd-c110c360ac95", "tracking_number": "SC2893196", "risk_score": 0.98, "predicted_eta": "2026-04-13 15:33", "anomaly_detected": true}
+2026-04-25 00:02:28,454 INFO request path=/api/weather/route-advisories method=GET status=200 duration_ms=8.56
+2026-04-25 00:02:28,455 INFO request path=/api/weather method=GET status=200 duration_ms=1.29
+2026-04-25 00:02:28,455 INFO request path=/api/shipments/stats method=GET status=200 duration_ms=9.92
+2026-04-25 00:02:28,512 INFO request path=/api/alerts method=GET status=200 duration_ms=67.03
+2026-04-25 00:02:28,513 INFO request path=/api/shipments method=GET status=200 duration_ms=68.11
+2026-04-25 00:02:28,514 INFO request path=/api/analytics/kpis method=GET status=200 duration_ms=59.69
+2026-04-25 00:02:28,555 INFO request path=/api/analytics/monthly-trends method=GET status=200 duration_ms=38.96
+2026-04-25 00:02:28,556 INFO request path=/api/analytics/region-disruptions method=GET status=200 duration_ms=39.05
+2026-04-25 00:02:28,556 INFO request path=/api/analytics/carrier-performance method=GET status=200 duration_ms=40.27
+2026-04-25 00:02:28,556 INFO request path=/api/analytics/ai-insights method=GET status=200 duration_ms=3.69
+2026-04-25 00:02:28,557 INFO request path=/api/routes/cities method=GET status=200 duration_ms=3.26
+2026-04-25 00:02:33,445 INFO prediction_event type=shipment_prediction payload={"shipment_id": "b1721bd8-1872-369c-ae56-eb116738c653", "tracking_number": "SC8198110", "risk_score": 0.98, "predicted_eta": "2026-04-17 04:39", "anomaly_detected": true}
+2026-04-25 00:02:33,446 INFO prediction_event type=shipment_prediction payload={"shipment_id": "c0366429-5606-75cb-a69c-937537f4ab96", "tracking_number": "SC6170393", "risk_score": 0.98, "predicted_eta": "2026-04-14 09:52", "anomaly_detected": true}
+2026-04-25 00:02:38,315 INFO request path=/api/weather/route-advisories method=GET status=200 duration_ms=11.43
+2026-04-25 00:02:38,315 INFO request path=/api/weather method=GET status=200 duration_ms=11.72
+2026-04-25 00:02:38,316 INFO request path=/api/shipments/stats method=GET status=200 duration_ms=13.07
+2026-04-25 00:02:38,376 INFO request path=/api/shipments method=GET status=200 duration_ms=74.08
+2026-04-25 00:02:38,377 INFO request path=/api/alerts method=GET status=200 duration_ms=74.24
+2026-04-25 00:02:38,378 INFO request path=/api/analytics/kpis method=GET status=200 duration_ms=63.73
+2026-04-25 00:02:38,424 INFO request path=/api/analytics/ai-insights method=GET status=200 duration_ms=26.39
+2026-04-25 00:02:38,425 INFO request path=/api/analytics/region-disruptions method=GET status=200 duration_ms=41.89
+2026-04-25 00:02:38,426 INFO request path=/api/routes/cities method=GET status=200 duration_ms=14.31
+2026-04-25 00:02:38,426 INFO request path=/api/analytics/carrier-performance method=GET status=200 duration_ms=42.84
+2026-04-25 00:02:38,433 INFO request path=/api/analytics/monthly-trends method=GET status=200 duration_ms=49.68
+2026-04-25 00:02:48,333 INFO request path=/api/weather/route-advisories method=GET status=200 duration_ms=23.04
+2026-04-25 00:02:48,334 INFO request path=/api/weather method=GET status=200 duration_ms=2.84
+2026-04-25 00:02:48,334 INFO request path=/api/shipments/stats method=GET status=200 duration_ms=26.99
+2026-04-25 00:02:48,403 INFO request path=/api/shipments method=GET status=200 duration_ms=95.81
+2026-04-25 00:02:48,404 INFO request path=/api/alerts method=GET status=200 duration_ms=94.99
+2026-04-25 00:02:48,406 INFO request path=/api/analytics/kpis method=GET status=200 duration_ms=73.66
+2026-04-25 00:02:48,468 INFO request path=/api/analytics/ai-insights method=GET status=200 duration_ms=21.74
+2026-04-25 00:02:48,469 INFO request path=/api/analytics/region-disruptions method=GET status=200 duration_ms=56.96
+2026-04-25 00:02:48,469 INFO request path=/api/routes/cities method=GET status=200 duration_ms=14.25
+2026-04-25 00:02:48,469 INFO request path=/api/analytics/carrier-performance method=GET status=200 duration_ms=59.69
+2026-04-25 00:02:48,470 INFO request path=/api/analytics/monthly-trends method=GET status=200 duration_ms=58.37
+2026-04-25 00:02:52,450 INFO prediction_event type=shipment_prediction payload={"shipment_id": "c2a1537d-2739-b5b7-aace-78804c71b70c", "tracking_number": "SC3592770", "risk_score": 0.98, "predicted_eta": "2026-04-12 23:05", "anomaly_detected": true}
+2026-04-25 00:02:58,323 INFO request path=/api/weather/route-advisories method=GET status=200 duration_ms=18.15
+2026-04-25 00:02:58,323 INFO request path=/api/weather method=GET status=200 duration_ms=4.62
+2026-04-25 00:02:58,324 INFO request path=/api/shipments/stats method=GET status=200 duration_ms=20.86
+2026-04-25 00:02:58,401 INFO request path=/api/shipments method=GET status=200 duration_ms=98.91
+2026-04-25 00:02:58,402 INFO request path=/api/alerts method=GET status=200 duration_ms=98.90
+2026-04-25 00:02:58,404 INFO request path=/api/analytics/kpis method=GET status=200 duration_ms=83.73
+2026-04-25 00:02:58,440 INFO request path=/api/analytics/ai-insights method=GET status=200 duration_ms=3.47
+2026-04-25 00:02:58,441 INFO request path=/api/analytics/region-disruptions method=GET status=200 duration_ms=30.41
+2026-04-25 00:02:58,449 INFO request path=/api/routes/cities method=GET status=200 duration_ms=11.33
+2026-04-25 00:02:58,457 INFO request path=/api/analytics/monthly-trends method=GET status=200 duration_ms=48.80
+2026-04-25 00:02:58,457 INFO request path=/api/analytics/carrier-performance method=GET status=200 duration_ms=51.18
+2026-04-25 00:02:58,819 INFO prediction_event type=shipment_prediction payload={"shipment_id": "fff19c1f-4ae7-86e9-62db-986e7d4ed463", "tracking_number": "SC5542025", "risk_score": 0.98, "predicted_eta": "2025-10-24 13:59", "anomaly_detected": true}
+2026-04-25 00:02:58,820 INFO prediction_event type=shipment_prediction payload={"shipment_id": "4d9b4eb8-bc56-1d17-4abe-9f2ee2439f40", "tracking_number": "SC8598227", "risk_score": 0.98, "predicted_eta": "2026-04-21 22:47", "anomaly_detected": true}
+2026-04-25 00:03:05,248 INFO prediction_event type=shipment_prediction payload={"shipment_id": "f925fe10-fab4-241a-1258-1f519d6f0fe5", "tracking_number": "SC4742893", "risk_score": 0.98, "predicted_eta": "2026-04-27 07:10", "anomaly_detected": true}
+2026-04-25 00:03:11,333 INFO request path=/api/weather/route-advisories method=GET status=200 duration_ms=23.81
+2026-04-25 00:03:11,335 INFO request path=/api/weather method=GET status=200 duration_ms=7.54
+2026-04-25 00:03:11,335 INFO request path=/api/shipments/stats method=GET status=200 duration_ms=27.54
+2026-04-25 00:03:11,420 INFO request path=/api/shipments method=GET status=200 duration_ms=113.39
+2026-04-25 00:03:11,420 INFO request path=/api/alerts method=GET status=200 duration_ms=112.34
+2026-04-25 00:03:11,423 INFO request path=/api/analytics/kpis method=GET status=200 duration_ms=89.53
+2026-04-25 00:03:11,473 INFO request path=/api/analytics/carrier-performance method=GET status=200 duration_ms=49.34
+2026-04-25 00:03:11,474 INFO request path=/api/routes/cities method=GET status=200 duration_ms=3.39
+2026-04-25 00:03:11,474 INFO request path=/api/analytics/monthly-trends method=GET status=200 duration_ms=48.65
+2026-04-25 00:03:11,474 INFO request path=/api/analytics/ai-insights method=GET status=200 duration_ms=3.98
+2026-04-25 00:03:11,474 INFO request path=/api/analytics/region-disruptions method=GET status=200 duration_ms=48.81
+2026-04-25 00:03:11,745 INFO prediction_event type=shipment_prediction payload={"shipment_id": "4d9b4eb8-bc56-1d17-4abe-9f2ee2439f40", "tracking_number": "SC8598227", "risk_score": 0.98, "predicted_eta": "2026-04-21 22:47", "anomaly_detected": true}
+2026-04-25 00:03:11,746 INFO prediction_event type=shipment_prediction payload={"shipment_id": "2eba2b90-99fa-c129-4dc6-9015c2906023", "tracking_number": "SC3966636", "risk_score": 0.98, "predicted_eta": "2026-04-12 21:52", "anomaly_detected": true}
+2026-04-25 00:03:24,269 INFO prediction_event type=shipment_prediction payload={"shipment_id": "efa4e6dd-118d-768c-b448-14687a8cb853", "tracking_number": "SC3433187", "risk_score": 0.98, "predicted_eta": "2026-04-16 17:04", "anomaly_detected": true}
+2026-04-25 00:03:24,270 INFO prediction_event type=shipment_prediction payload={"shipment_id": "2dc508eb-f2d3-1205-42f6-cba2a56041a6", "tracking_number": "SC9102593", "risk_score": 0.9554, "predicted_eta": "2026-04-13 06:42", "anomaly_detected": true}
+2026-04-25 00:03:24,272 INFO prediction_event type=shipment_prediction payload={"shipment_id": "fdbe2378-c745-1031-728d-8ba05ce5af21", "tracking_number": "SC9388496", "risk_score": 0.98, "predicted_eta": "2026-04-20 09:06", "anomaly_detected": true}
+2026-04-25 00:03:30,574 INFO prediction_event type=shipment_prediction payload={"shipment_id": "097148ec-0f7b-9bcd-6b59-85b97dacb9c2", "tracking_number": "SC7485163", "risk_score": 0.98, "predicted_eta": "2026-04-15 05:37", "anomaly_detected": true}
+2026-04-25 00:03:30,576 INFO prediction_event type=shipment_prediction payload={"shipment_id": "bb586d81-f3f2-0ef7-9a57-831f3c18056c", "tracking_number": "SC4933529", "risk_score": 0.98, "predicted_eta": "2026-04-13 02:10", "anomaly_detected": true}
