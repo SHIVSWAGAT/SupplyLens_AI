@@ -1,0 +1,14 @@
+Exception triage rule:
+Prioritize shipments with high predicted delay probability, low carrier reliability, and destinations under severe weather or congestion. Escalate when predicted ETA variance crosses customer SLA thresholds.
+
+Rerouting rule:
+Use the safest route when predicted risk is high and the cost of disruption is greater than the premium of the alternate path. Use the cheapest route when risk is low and customer priority is standard.
+
+Customer communication rule:
+When predicted delay exceeds 90 minutes or anomaly detection flags unusual shipment behavior, proactively notify account teams with the likely cause, projected ETA impact, and remediation plan.
+
+Cold-chain rule:
+Pharmaceutical and perishables movements should bias toward high-confidence routes and faster modes when weather pressure or congestion exceeds moderate thresholds.
+
+Control tower rule:
+Refresh weather, prediction, and anomaly signals continuously and re-rank the exception queue based on risk score, ETA drift, anomaly status, and account priority.

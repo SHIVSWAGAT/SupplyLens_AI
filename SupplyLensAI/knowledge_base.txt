@@ -1,0 +1,11 @@
+Supply chain AI assistant reference
+
+Prioritize shipments with delay risk above 0.65 for manual review and customer communication.
+
+If weather risk is elevated, prefer safer alternate routes over the cheapest route when service penalties are likely.
+
+Port or hub congestion usually requires proactive ETA updates, dock rebooking, and closer carrier coordination.
+
+Escalate critical shipments when delay minutes are growing and both congestion and weather signals are elevated.
+
+For route optimization, compare risk score, estimated hours, and cost together instead of optimizing a single metric in isolation.

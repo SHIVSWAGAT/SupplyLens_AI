@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SupplyLens AI</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08111f;
+      --panel: rgba(17, 24, 39, 0.82);
+      --line: rgba(148, 163, 184, 0.18);
+      --accent: #38bdf8;
+      --accent-strong: #14b8a6;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 28%),
+        radial-gradient(circle at right center, rgba(20, 184, 166, 0.15), transparent 24%),
+        linear-gradient(180deg, #020617 0%, var(--bg) 100%);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    main {
+      width: min(760px, 100%);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: 0 30px 80px rgba(2, 6, 23, 0.45);
+      backdrop-filter: blur(18px);
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.05;
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      background: rgba(56, 189, 248, 0.12);
+      font-weight: 600;
+    }
+
+    .button.secondary {
+      border-color: var(--line);
+      background: rgba(15, 23, 42, 0.65);
+    }
+
+    code {
+      color: #bae6fd;
+      font-family: "SFMono-Regular", Consolas, monospace;
+    }
+
+    ul {
+      margin: 20px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>SupplyLens AI Control Tower</h1>
+    <p>
+      The FastAPI backend is running. Build the React frontend in <code>frontend/</code>
+      to have the backend serve the production app from <code>/</code>, or run the Vite
+      dev server for local frontend development.
+    </p>
+    <div class="actions">
+      <a class="button" href="/docs">Open API Docs</a>
+      <a class="button secondary" href="/api/auth/demo-users">View Demo Users</a>
+    </div>
+    <ul>
+      <li>Production frontend build output can be generated to <code>frontend/dist/</code> for Render static hosting.</li>
+      <li>Use <code>npm run build:embed</code> in <code>frontend/</code> when you want the backend to serve the embedded React bundle from <code>static/app/</code>.</li>
+      <li>Backend APIs are available under <code>/api</code> and realtime updates under <code>/ws/live</code>.</li>
+    </ul>
+  </main>
+</body>
+</html>

@@ -1,0 +1,29 @@
+[
+  {
+    "scenario": "Port congestion",
+    "signal_pattern": ["high congestion", "sea freight", "destination backlog"],
+    "recommended_actions": [
+      "Switch to alternate port and trans-ship inland",
+      "Rebalance appointments at destination warehouse",
+      "Notify customer service teams of updated unload window"
+    ]
+  },
+  {
+    "scenario": "Weather disruption",
+    "signal_pattern": ["storm", "rain", "snow", "wind", "fog"],
+    "recommended_actions": [
+      "Move to weather-safe corridor",
+      "Delay dispatch until the weather window reopens",
+      "Increase monitoring cadence and customer notification frequency"
+    ]
+  },
+  {
+    "scenario": "Carrier underperformance",
+    "signal_pattern": ["repeated delay", "low carrier score", "high anomaly"],
+    "recommended_actions": [
+      "Escalate to carrier operations manager",
+      "Shift future bookings to higher-performing lanes",
+      "Audit lane-specific dwell and handoff times"
+    ]
+  }
+]
