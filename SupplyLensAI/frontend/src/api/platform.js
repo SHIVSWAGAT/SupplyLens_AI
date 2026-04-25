@@ -107,13 +107,19 @@ export function sendChatMessage(token, payload) {
   });
 }
 
-export function streamChatMessage(token, payload, onEvent) {
-  return requestStream(`${BASE}/api/chat/stream`, {
+export async function streamChatMessage(token, payload, onEvent) {
+  const response = await requestJson("/api/chat", {
     method: "POST",
     body: payload,
     token,
-    onEvent,
   });
+
+  // simulate streaming (so UI doesn't break)
+  if (onEvent) {
+    onEvent({ type: "message", content: response?.message || response });
+  }
+
+  return response;
 }
 
 export function predictRisk(token, payload) {
