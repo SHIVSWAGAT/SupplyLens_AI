@@ -1,3 +1,4 @@
+const BASE = import.meta.env.VITE_API_BASE_URL;
 import { requestJson, requestStream } from "./client.js";
 
 export function getDemoUsers() {
@@ -99,7 +100,7 @@ export function getWeatherBundle(token) {
 }
 
 export function sendChatMessage(token, payload) {
-  return requestJson("/api/chat", {
+  return requestJson(`${BASE}/api/chat`, {
     method: "POST",
     body: payload,
     token,
@@ -107,7 +108,7 @@ export function sendChatMessage(token, payload) {
 }
 
 export function streamChatMessage(token, payload, onEvent) {
-  return requestStream("/api/chat/stream", {
+  return requestStream(`${BASE}/api/chat/stream`, {
     method: "POST",
     body: payload,
     token,
